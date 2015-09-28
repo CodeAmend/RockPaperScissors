@@ -15,10 +15,8 @@ public class RPS {
     // Scissors cut Paper, Paper covers Rock, Rock smashes Scissors.
 
     @Test
-    public void test() {
-
-        Assert.assertTrue(false);
-
+    public void paperBeatsRock() {
+        Assert.assertTrue(Gesture.PAPER.beats(Gesture.ROCK));
     }
 
 }
