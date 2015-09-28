@@ -14,18 +14,24 @@ public class RPS {
     // or I will win, or the computer will win.
     // Scissors cut Paper, Paper covers Rock, Rock smashes Scissors.
 
+    // Winning
     @Test
-    public void paperBeatsRock() {
-        Assert.assertTrue(Gesture.PAPER.beats(Gesture.ROCK));
+    public void winningGesture() {
+        Assert.assertTrue("Winning", Gesture.PAPER.beats(Gesture.ROCK));
+        Assert.assertTrue("Winning", Gesture.ROCK.beats(Gesture.SCISSORS));
+        Assert.assertTrue("Winning", Gesture.SCISSORS.beats(Gesture.PAPER));
+    }
+
+    //Losing
+    @Test
+    public void losingGesture() {
+        Assert.assertFalse("Losing", Gesture.ROCK.beats(Gesture.PAPER));
+        Assert.assertFalse("Losing", Gesture.PAPER.beats(Gesture.SCISSORS));
+        Assert.assertFalse("Losing", Gesture.SCISSORS.beats(Gesture.ROCK));
     }
 
     @Test
-    public void rockBeatsPaper() {
-        Assert.assertFalse(Gesture.ROCK.beats(Gesture.PAPER));
-    }
-
-    @Test
-     public void paperBeatsScissors() {
-        Assert.assertFalse(Gesture.PAPER.beats(Gesture.SCISSORS));
+    public void tieGesture() {
+        
     }
 }
