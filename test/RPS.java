@@ -20,8 +20,12 @@ public class RPS {
     }
 
     @Test
-    public void RockBeatsPaper() {
+    public void rockBeatsPaper() {
         Assert.assertFalse(Gesture.ROCK.beats(Gesture.PAPER));
     }
 
+    @Test
+     public void paperBeatsScissors() {
+        Assert.assertFalse(Gesture.PAPER.beats(Gesture.SCISSORS));
+    }
 }
