@@ -6,6 +6,9 @@ public enum Gesture {
     ROCK, PAPER, SCISSORS;
 
     public boolean beats(Gesture gesture) {
+        if(PAPER == gesture) {
+            return false;
+        }
         return true;
     }
 
