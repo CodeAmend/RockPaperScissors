@@ -32,6 +32,8 @@ public class RPS {
 
     @Test
     public void tieGesture() {
-        
+        //TODO: what do I want to happen here?
+        //Only two possibilities currently
+        //Perhaps a new enum Staus { WIN, LOSE, TIE }
     }
 }
