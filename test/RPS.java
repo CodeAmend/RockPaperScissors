@@ -19,4 +19,9 @@ public class RPS {
         Assert.assertTrue(Gesture.PAPER.beats(Gesture.ROCK));
     }
 
+    @Test
+    public void RockBeatsPaper() {
+        Assert.assertFalse(Gesture.ROCK.beats(Gesture.PAPER));
+    }
+
 }
