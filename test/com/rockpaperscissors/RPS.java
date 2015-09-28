@@ -37,6 +37,7 @@ public class RPS extends Assert  {
     public void tieGesture() {
 
         assertEquals(TIE, ROCK.attacks(SCISSORS));
+
     }
 
 }
