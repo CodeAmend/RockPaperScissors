@@ -2,14 +2,13 @@ package com.rockpaperscissors;
 
 import org.junit.Assert;
 import org.junit.Test;
-import static com.rockpaperscissors.Gesture.ROCK;
-import static com.rockpaperscissors.Gesture.PAPER;
-import static com.rockpaperscissors.Gesture.SCISSORS;
+import static com.rockpaperscissors.Status.*;
+import static com.rockpaperscissors.Gesture.*;
 
 /**
  * Created by codeamend on 9/28/15.
  */
-public class RPS extends Assert {
+public class RPS extends Assert  {
 
     // I have three valid moves: Rock, Paper, or Scissors.
     // The result will be either
@@ -20,17 +19,24 @@ public class RPS extends Assert {
 
     @Test
     public void winningGesture() {
-        assertTrue(PAPER.beats(ROCK));
-        assertTrue(ROCK.beats(SCISSORS));
-        assertTrue(SCISSORS.beats(PAPER));
+        assertTrue(PAPER.attacks(ROCK));
+        assertTrue(ROCK.attacks(SCISSORS));
+        assertTrue(SCISSORS.attacks(PAPER));
     }
 
 
     @Test
     public void losingGesture() {
-        assertFalse(ROCK.beats(PAPER));
-        assertFalse(PAPER.beats(SCISSORS));
-        assertFalse(SCISSORS.beats(ROCK));
+        assertFalse(ROCK.attacks(PAPER));
+        assertFalse(PAPER.attacks(SCISSORS));
+        assertFalse(SCISSORS.attacks(ROCK));
+    }
+
+
+    @Test
+    public void tieGesture() {
+
+        assertEquals(TIE, ROCK.attacks(SCISSORS));
     }
 
 }

@@ -7,7 +7,7 @@ public enum Gesture {
 
     ROCK, PAPER, SCISSORS;
 
-    public boolean beats(Gesture gesture) {
+    public boolean attacks(Gesture gesture) {
         if (this == ROCK && gesture == SCISSORS ||
             this == SCISSORS && gesture == PAPER ||
             this == PAPER && gesture == ROCK ) {
