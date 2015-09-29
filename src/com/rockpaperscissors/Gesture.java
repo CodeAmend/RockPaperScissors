@@ -13,7 +13,8 @@ public enum Gesture {
     ROCK(1, 3), PAPER(2, 1), SCISSORS(3, 2);
 
     private int gestureNumber, losesTo;
-    private static List<Gesture> gestureList;
+    private static List<Gesture>
+            gestureList = new ArrayList<>(Arrays.asList(Gesture.values()));
 
     Gesture(int thisNumber, int losesTo) {
         this.gestureNumber = thisNumber;
@@ -30,7 +31,6 @@ public enum Gesture {
     public static Gesture random() {
         Random rand = new Random();
         int pick = rand.nextInt(Gesture.values().length);
-        gestureList = new ArrayList<>(Arrays.asList(Gesture.values()));
         return gestureList.get(pick);
     }
 }
