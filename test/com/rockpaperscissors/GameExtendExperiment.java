@@ -44,5 +44,11 @@ public class GameExtendExperiment extends Assert {
         assertTrue(gList.isEmpty());
     }
 
+    @Test
+    public void removeSwitchPaperTrial() {
+        init(PAPER);
+        assertTrue(gList.isEmpty());
+    }
+
 
 }
