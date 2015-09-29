@@ -21,7 +21,7 @@ public enum Gesture {
 
     public static Gesture random() {
         Random rand = new Random();
-        int pick = rand.nextInt(3);
+        int pick = rand.nextInt(Gesture.values().length);
         switch (pick) {
             case 0 : return ROCK;
             case 1 : return PAPER;
