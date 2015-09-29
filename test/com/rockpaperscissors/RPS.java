@@ -2,6 +2,9 @@ package com.rockpaperscissors;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.*;
+
 import static com.rockpaperscissors.Gesture.ROCK;
 import static com.rockpaperscissors.Gesture.PAPER;
 import static com.rockpaperscissors.Gesture.SCISSORS;
@@ -17,6 +20,8 @@ public class RPS extends Assert {
     // or I will win, or the computer will win.
     // Scissors cut Paper, Paper covers Rock, Rock smashes Scissors.
 
+    Gesture myGesture;
+    Gesture computer;
 
     @Test
     public void winningGesture() {
@@ -36,9 +41,6 @@ public class RPS extends Assert {
     @Test
     public void tieGesture() {
 
-        Gesture myGesture;
-        Gesture computer;
-
         myGesture = ROCK;
         computer = ROCK;
         assertTrue(myGesture.equals(computer));
@@ -54,4 +56,34 @@ public class RPS extends Assert {
 
     }
 
+    @Test
+    public void randomComputerPick() {
+        List<Gesture> allGestures = new ArrayList<>(Arrays.asList(ROCK, PAPER, SCISSORS));
+        for(int i = 0; !allGestures.isEmpty() && i < 500; i++) {
+
+            Gesture next = Gesture.random();
+            if(allGestures.contains(next)) {
+                allGestures.remove(next);
+            }
+        }
+        assertTrue(allGestures.isEmpty());
+    }
+
+
+    @Test
+    public void anotherRandomComputerPick() {
+
+        Set<Gesture> allGestures = new HashSet<>();
+        for(int i = 0; allGestures.size() < Gesture.values().length && i < 500; i++) {
+            allGestures.add(Gesture.random());
+        }
+
+        assertEquals(allGestures.size(), Gesture.values().length);
+
+    }
+
+    @Test
+    public void testGameMechanics() {
+
+    }
 }
