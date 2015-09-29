@@ -33,4 +33,25 @@ public class RPS extends Assert {
         assertFalse(SCISSORS.beats(ROCK));
     }
 
+    @Test
+    public void tieGesture() {
+
+        Gesture myGesture;
+        Gesture computer;
+
+        myGesture = ROCK;
+        computer = ROCK;
+        assertTrue(myGesture.equals(computer));
+
+        myGesture = SCISSORS;
+        computer = SCISSORS;
+        assertTrue(myGesture.equals(computer));
+
+        myGesture = PAPER;
+        computer = PAPER;
+        assertTrue(myGesture.equals(computer));
+
+
+    }
+
 }
