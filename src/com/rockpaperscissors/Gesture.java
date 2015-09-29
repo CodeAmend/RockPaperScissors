@@ -7,26 +7,25 @@ import java.util.Random;
  */
 public enum Gesture {
 
-    ROCK, PAPER, SCISSORS;
+    ROCK(1, 3), PAPER(2, 1), SCISSORS(3, 2);
+
+    private int gestureNumber, losesTo;
+
+    Gesture(int thisNumber, int losesTo) {
+        this.gestureNumber = thisNumber;
+        this.losesTo = losesTo;
+    }
 
     public boolean beats(Gesture gesture) {
-        if (this == ROCK && gesture == SCISSORS ||
-            this == SCISSORS && gesture == PAPER ||
-            this == PAPER && gesture == ROCK ) {
-            return true;
-        } else {
+        if(this.losesTo == gesture.gestureNumber) {
             return false;
         }
+        return true;
     }
 
     public static Gesture random() {
         Random rand = new Random();
         int pick = rand.nextInt(Gesture.values().length);
-        switch (pick) {
-            case 0 : return ROCK;
-            case 1 : return PAPER;
-            case 2 : return SCISSORS;
-        }
-        return null;
+        return ROCK;
     }
 }
