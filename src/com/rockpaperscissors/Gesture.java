@@ -1,5 +1,8 @@
 package com.rockpaperscissors;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -10,6 +13,7 @@ public enum Gesture {
     ROCK(1, 3), PAPER(2, 1), SCISSORS(3, 2);
 
     private int gestureNumber, losesTo;
+    private static List<Gesture> gestureList;
 
     Gesture(int thisNumber, int losesTo) {
         this.gestureNumber = thisNumber;
@@ -26,6 +30,7 @@ public enum Gesture {
     public static Gesture random() {
         Random rand = new Random();
         int pick = rand.nextInt(Gesture.values().length);
-        return ROCK;
+        gestureList = new ArrayList<>(Arrays.asList(Gesture.values()));
+        return gestureList.get(pick);
     }
 }
