@@ -21,8 +21,8 @@ public enum Gesture {
         this.beatableIDs = beatableID;
     }
 
-    public boolean beats(Gesture gesture) {
-        if(Arrays.asList(beatableIDs).contains(gesture.ID)) {
+    public boolean beats(Gesture opponent) {
+        if(Arrays.asList(beatableIDs).contains(opponent.ID)) {
             return true;
         }
         return false;
