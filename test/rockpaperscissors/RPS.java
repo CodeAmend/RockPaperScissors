@@ -19,7 +19,10 @@ public class RPS {
     @Test
     public void paper_beats_rock() {
         Assert.assertTrue(PAPER.beats(ROCK));
-        
+    }
+    @Test
+    public void rock_loses_to_paper() {
+        Assert.assertFalse(ROCK.beats(PAPER));
     }
 
 }

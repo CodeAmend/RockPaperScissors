@@ -8,6 +8,6 @@ public enum Gesture {
     ROCK, PAPER;
 
     public boolean beats(Gesture opponent) {
-        return false;
+        return true;
     }
 }
