@@ -1,3 +1,5 @@
+package com.calculator;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -6,7 +8,7 @@ import java.awt.*;
 /**
  * Created by codeamend on 9/28/15.
  */
-public class RPS {
+public class RPS extends Assert {
 
     // I have three valid moves: Rock, Paper, or Scissors.
     // The result will be either
@@ -17,7 +19,7 @@ public class RPS {
     @Test
     public void test() {
 
-        Assert.assertTrue(false);
+        assertTrue(false);
 
     }
 
