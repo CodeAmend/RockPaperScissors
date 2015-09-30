@@ -1,29 +1,26 @@
 package com.rockpaperscissors;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Created by codeamend on 9/28/15.
  */
 public enum Gesture {
 
-    ROCK(1, 3), PAPER(2, 1), SCISSORS(3, 2), LIZARD(4, 2);
+    ROCK(1, new int[3]), PAPER(2, new int[1]), SCISSORS(3, new int [2]), LIZARD(4, new int[2]);
 
     private static Random random = new Random();
-    private int ID, beatlableID;
+    private int ID, beatableIDs[];
     private static List<Gesture>
             gestureList = new ArrayList<>(Arrays.asList(Gesture.values()));
 
-    Gesture(int thisNumber, int beatableID) {
+    Gesture(int thisNumber, int[] beatableID) {
         this.ID = thisNumber;
-        this.beatlableID = beatableID;
+        this.beatableIDs = beatableID;
     }
 
     public boolean beats(Gesture gesture) {
-        if(this.beatlableID == gesture.ID) {
+        if(Arrays.asList(beatableIDs).contains(gesture.ID)) {
             return true;
         }
         return false;
