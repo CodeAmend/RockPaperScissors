@@ -9,7 +9,7 @@ public class RockPaperScissorsGame {
     public static void main(String[] args) {
 
         RockPaperScissorsGame rps = new RockPaperScissorsGame();
-        for(int i = 0; i < 500; i++) {
+        for(int i = 0; i < 10; i++) {
             rps.play();
         }
     }
@@ -20,17 +20,17 @@ public class RockPaperScissorsGame {
 
     private void oneTwoThreeShoot() {
         Gesture computer = Gesture.random();
-        Gesture myPick = ROCK;
+        Gesture myPick = Gesture.random();
         getScore(myPick, computer);
     }
 
     private void getScore(Gesture myPick, Gesture computer) {
         if(myPick.equals(computer)) {
-            System.out.println("It's a tie!!!");
+            System.out.printf("Computer: %s\nMy Pick :%s\nTie!\n\n", computer, myPick);
         } else if (myPick.beats(computer)) {
-            System.out.println("You win!!!");
+            System.out.printf("Computer: %s\nMy Pick :%s\nWin!\n\n", computer, myPick);
         } else {
-            System.out.println("You Lose!!!");
+            System.out.printf("Computer: %s\nMy Pick :%s\nLose!\n\n", computer, myPick);
         }
     }
 
