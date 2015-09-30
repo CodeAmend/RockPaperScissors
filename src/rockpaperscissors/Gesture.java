@@ -5,9 +5,17 @@ package rockpaperscissors;
  */
 public enum Gesture {
 
-    ROCK, PAPER;
+    ROCK(1), PAPER(2);
+
+    private int rank;
+
+    Gesture(int rank) {
+        this.rank = rank;
+    }
 
     public boolean beats(Gesture opponent) {
-        return true;
+        if(this.rank > opponent.rank)
+            return true;
+        return false;
     }
 }
