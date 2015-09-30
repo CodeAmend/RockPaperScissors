@@ -5,7 +5,7 @@ package rockpaperscissors;
  */
 public enum Gesture {
 
-    ROCK(1), PAPER(2);
+    ROCK(1), PAPER(2), SCISSORS(3);
 
     private int rank;
 

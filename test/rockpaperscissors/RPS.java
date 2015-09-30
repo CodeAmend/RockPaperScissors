@@ -8,7 +8,7 @@ import static rockpaperscissors.Gesture.*;
 /**
  * Created by codeamend on 9/28/15.
  */
-public class RPS {
+public class RPS extends Assert {
 
     // I have three valid moves: Rock, Paper, or Scissors.
     // The result will be either
@@ -18,11 +18,15 @@ public class RPS {
 
     @Test
     public void paper_beats_rock() {
-        Assert.assertTrue(PAPER.beats(ROCK));
+        assertTrue(PAPER.beats(ROCK));
     }
     @Test
     public void rock_loses_to_paper() {
-        Assert.assertFalse(ROCK.beats(PAPER));
+        assertFalse(ROCK.beats(PAPER));
+    }
+    @Test
+    public void rock_beats_scissors() {
+        assertTrue(ROCK.beats(SCISSORS));
     }
 
 }
