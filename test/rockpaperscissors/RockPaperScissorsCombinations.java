@@ -10,12 +10,6 @@ import static rockpaperscissors.Gesture.*;
  */
 public class RockPaperScissorsCombinations extends Assert {
 
-    // I have three valid moves: Rock, Paper, or Scissors.
-    // The result will be either
-    // a tie when the computer and I make the same move,
-    // or I will win, or the computer will win.
-    // Scissors cut Paper, Paper covers Rock, Rock smashes Scissors.
-
     //Wins
     @Test
     public void paper_beats_rock() {
@@ -47,15 +41,15 @@ public class RockPaperScissorsCombinations extends Assert {
     //Tie
     @Test
     public void rock_ties_with_rock() {
-        assertFalse(ROCK.beats(ROCK));
+        assertTrue(ROCK.equals(ROCK));
     }
     @Test
     public void paper_ties_with_paper() {
-        assertFalse(PAPER.beats(PAPER));
+        assertTrue(PAPER.equals(PAPER));
     }
     @Test
     public void scissors_ties_with_scissors() {
-        assertFalse(SCISSORS.beats(SCISSORS));
+        assertTrue(SCISSORS.equals(SCISSORS));
     }
 
 }
