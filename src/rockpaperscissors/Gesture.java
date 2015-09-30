@@ -14,7 +14,7 @@ public enum Gesture {
     }
 
     public boolean beats(Gesture opponent) {
-        if(this.rank > opponent.rank)
+        if((this.rank - opponent.rank + 3) % 3 == 1)
             return true;
         return false;
     }
