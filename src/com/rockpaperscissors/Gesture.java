@@ -24,9 +24,9 @@ public enum Gesture {
 
     public boolean beats(Gesture gesture) {
         if(this.beatlableID == gesture.ID) {
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 
     public static Gesture random() {
