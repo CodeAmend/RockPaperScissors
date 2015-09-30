@@ -30,7 +30,8 @@ public enum Gesture {
     }
 
     public static Gesture random() {
-        int pick = random.nextInt(Gesture.values().length);
-        return gestureList.get(pick);
+        int randomChoice = random.nextInt(Gesture.values().length);
+        return gestureList.get(randomChoice);
     }
 }
+
