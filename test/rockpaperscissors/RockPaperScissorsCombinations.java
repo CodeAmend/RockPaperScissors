@@ -8,7 +8,7 @@ import static rockpaperscissors.Gesture.*;
 /**
  * Created by codeamend on 9/28/15.
  */
-public class RPS extends Assert {
+public class RockPaperScissorsCombinations extends Assert {
 
     // I have three valid moves: Rock, Paper, or Scissors.
     // The result will be either
