@@ -18,4 +18,8 @@ public enum Gesture {
             return true;
         return false;
     }
+
+    public static Gesture getRandomGesture() {
+        return ROCK;
+    }
 }
