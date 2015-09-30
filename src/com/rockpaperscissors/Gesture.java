@@ -7,7 +7,8 @@ import java.util.*;
  */
 public enum Gesture {
 
-    ROCK(1, new Integer[] {2,4}), PAPER(2, new Integer[] {1}), SCISSORS(3, new Integer[]{2,4}), LIZARD(4, new Integer[]{2});
+    ROCK(1, new Integer[] {2,4}), PAPER(2, new Integer[] {1,5}), SCISSORS(3, new Integer[]{2,4}),
+    LIZARD(4, new Integer[]{2}), SPOCK(5, new Integer[] {1,3});
 
     private static Random random = new Random();
     private int ID;
