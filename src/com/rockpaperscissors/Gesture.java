@@ -7,14 +7,15 @@ import java.util.*;
  */
 public enum Gesture {
 
-    ROCK(1, new int[3]), PAPER(2, new int[1]), SCISSORS(3, new int [2]), LIZARD(4, new int[2]);
+    ROCK(1, new Integer[] {2}), PAPER(2, new Integer[] {1}), SCISSORS(3, new Integer[]{2}), LIZARD(4, new Integer[]{2});
 
     private static Random random = new Random();
-    private int ID, beatableIDs[];
+    private int ID;
+    private Integer[] beatableIDs;
     private static List<Gesture>
             gestureList = new ArrayList<>(Arrays.asList(Gesture.values()));
 
-    Gesture(int thisNumber, int[] beatableID) {
+    Gesture(int thisNumber, Integer[] beatableID) {
         this.ID = thisNumber;
         this.beatableIDs = beatableID;
     }
