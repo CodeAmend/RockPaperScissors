@@ -8,7 +8,7 @@ import static rockpaperscissors.Gesture.*;
 /**
  * Created by codeamend on 9/28/15.
  */
-public class RockPaperScissorsCombinations extends Assert {
+public class AllCombinations extends Assert {
 
     //Wins
     @Test
