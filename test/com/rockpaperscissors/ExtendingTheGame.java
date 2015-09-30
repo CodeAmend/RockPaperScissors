@@ -62,5 +62,9 @@ public class ExtendingTheGame extends Assert {
     public void does_paper_beat_spock() {
         assertTrue(PAPER.beats(SPOCK));
     }
+    @Test
+    public void does_lizard_beat_spock() {
+        assertTrue(LIZARD.beats(SPOCK));
+    }
 
 }
