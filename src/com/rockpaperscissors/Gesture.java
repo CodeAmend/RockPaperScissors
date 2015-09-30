@@ -10,7 +10,7 @@ import java.util.Random;
  */
 public enum Gesture {
 
-    ROCK(1, 3), PAPER(2, 1), SCISSORS(3, 2);
+    ROCK(1, 3), PAPER(2, 1), SCISSORS(3, 2), LIZARD(4, 2);
 
     private static Random random = new Random();
     private int ID, beatlableID;

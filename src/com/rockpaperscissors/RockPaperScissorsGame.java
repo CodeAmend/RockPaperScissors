@@ -26,11 +26,11 @@ public class RockPaperScissorsGame {
 
     private void getScore(Gesture myPick, Gesture computer) {
         if(myPick.equals(computer)) {
-            System.out.printf("Computer: %s\nMy Pick :%s\nTie!\n\n", computer, myPick);
+            System.out.printf("Computer:%s\nMy Pick :%s\nTie!\n\n", computer, myPick);
         } else if (myPick.beats(computer)) {
-            System.out.printf("Computer: %s\nMy Pick :%s\nWin!\n\n", computer, myPick);
+            System.out.printf("Computer:%s\nMy Pick :%s\nWin!\n\n", computer, myPick);
         } else {
-            System.out.printf("Computer: %s\nMy Pick :%s\nLose!\n\n", computer, myPick);
+            System.out.printf("Computer:%s\nMy Pick :%s\nLose!\n\n", computer, myPick);
         }
     }
 
