@@ -13,17 +13,17 @@ public enum Gesture {
     ROCK(1, 3), PAPER(2, 1), SCISSORS(3, 2);
 
     private static Random random = new Random();
-    private int ID, losesTo;
+    private int ID, beatlableID;
     private static List<Gesture>
             gestureList = new ArrayList<>(Arrays.asList(Gesture.values()));
 
-    Gesture(int thisNumber, int losesTo) {
+    Gesture(int thisNumber, int beatableID) {
         this.ID = thisNumber;
-        this.losesTo = losesTo;
+        this.beatlableID = beatableID;
     }
 
     public boolean beats(Gesture gesture) {
-        if(this.losesTo == gesture.ID) {
+        if(this.beatlableID == gesture.ID) {
             return false;
         }
         return true;
