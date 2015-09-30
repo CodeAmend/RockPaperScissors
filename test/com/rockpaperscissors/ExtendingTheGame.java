@@ -32,5 +32,9 @@ public class ExtendingTheGame extends Assert {
     public void does_scissors_beat_lizard() {
         assertTrue(SCISSORS.beats(LIZARD));
     }
+    @Test
+    public void does_rock_beat_lizard() {
+        assertTrue(ROCK.beats(LIZARD));
+    }
 
 }
