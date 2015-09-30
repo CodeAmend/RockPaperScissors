@@ -1,8 +1,10 @@
+package rockpaperscissors;
+
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.awt.*;
-
+import static rockpaperscissors.Gesture.*;
 /**
  * Created by codeamend on 9/28/15.
  */
@@ -15,10 +17,9 @@ public class RPS {
     // Scissors cut Paper, Paper covers Rock, Rock smashes Scissors.
 
     @Test
-    public void test() {
-
-        Assert.assertTrue(false);
-
+    public void paper_beats_rock() {
+        Assert.assertTrue(PAPER.beats(ROCK));
+        
     }
 
 }
