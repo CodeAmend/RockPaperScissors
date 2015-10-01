@@ -8,15 +8,6 @@ import static rockpaperscissors.Gesture.*;
  */
 public class ExtendingTheGame extends Assert {
 
-    @Test
-    public void spock_beats_scissors() {
-        assertTrue(SPOCK.beats(SCISSORS));
-    }
-
-    @Test
-    public void lizard_beats_paper() {
-        assertTrue(LIZARD.beats(PAPER));
-    }
 
 
 }

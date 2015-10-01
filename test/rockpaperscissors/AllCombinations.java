@@ -23,6 +23,14 @@ public class AllCombinations extends Assert {
     public void scissors_beats_paper() {
         assertTrue(SCISSORS.beats(PAPER));
     }
+    @Test
+    public void spock_beats_scissors() {
+        assertTrue(SPOCK.beats(SCISSORS));
+    }
+    @Test
+    public void lizard_beats_paper() {
+        assertTrue(LIZARD.beats(PAPER));
+    }
 
     //losses
     @Test
@@ -56,5 +64,6 @@ public class AllCombinations extends Assert {
     public void gesture_test() {
 
     }
+
 
 }
