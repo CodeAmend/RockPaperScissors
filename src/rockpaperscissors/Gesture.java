@@ -13,8 +13,8 @@ public enum Gesture {
         this.rank = rank;
     }
 
-    public boolean beats(Gesture opponentsGesture) {
-        if((this.rank - opponentsGesture.rank + 3) % 3 == 1)
+    public boolean beats(Gesture opponents) {
+        if((this.rank - opponents.rank + 3) % 3 == 1)
             return true;
         return false;
     }
