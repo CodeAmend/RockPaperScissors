@@ -19,9 +19,7 @@ public enum Gesture {
     }
 
     public boolean beats(Gesture opponents) {
-        if((this.rank - opponents.rank + 3) % 3 == 1)
-            return true;
-        return false;
+        return ((this.rank - opponents.rank + 3) % 3 == 1);
     }
 
     public static Gesture getRandomGesture() {
