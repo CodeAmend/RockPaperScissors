@@ -17,7 +17,7 @@ public class RockPaperScissors {
 
     public void oneTwoThreeShoot() {
         usersHand = ROCK;
-        computersHand = Gesture.getRandomGesture();
+        computersHand = Gesture.randomHand();
         displayScore(usersHand, computersHand);
     }
 

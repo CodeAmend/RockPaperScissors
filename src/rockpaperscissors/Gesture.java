@@ -23,7 +23,7 @@ public enum Gesture {
         return (moduloAlgorithm == 1 || moduloAlgorithm == 3);
     }
 
-    public static Gesture getRandomGesture() {
+    public static Gesture randomHand() {
         return values()[pick.nextInt(values().length)];
     }
 }

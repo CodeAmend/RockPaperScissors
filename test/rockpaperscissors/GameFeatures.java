@@ -6,7 +6,7 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-import static rockpaperscissors.Gesture.*;
+
 /**
  * Created by codeamend on 9/30/15.
  */
@@ -17,7 +17,7 @@ public class GameFeatures extends Assert {
     @Test
     public void get_random_gesture() {
         for(int i = 0; i < 50; i++) {
-            gestures.remove(Gesture.getRandomGesture());
+            gestures.remove(Gesture.randomHand());
         }
         assertTrue(gestures.isEmpty());
     }
