@@ -52,4 +52,9 @@ public class AllCombinations extends Assert {
         assertTrue(SCISSORS.equals(SCISSORS));
     }
 
+    @Test
+    public void gesture_test() {
+
+    }
+
 }
