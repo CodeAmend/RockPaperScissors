@@ -12,7 +12,7 @@ public enum Gesture {
     ROCK(1), PAPER(2), SCISSORS(3), SPOCK(4), LIZARD(5);
 
     private int rank;
-    static Random rand = new Random();
+    private static Random pick = new Random();
 
     Gesture(int rank) {
         this.rank = rank;
@@ -24,7 +24,7 @@ public enum Gesture {
     }
 
     public static Gesture getRandomGesture() {
-        int gesturePick = rand.nextInt(Gesture.values().length);
+        int gesturePick = pick.nextInt(Gesture.values().length);
         return Arrays.asList(Gesture.values()).get(gesturePick);
     }
 }
