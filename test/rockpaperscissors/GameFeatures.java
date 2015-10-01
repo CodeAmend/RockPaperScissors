@@ -1,6 +1,6 @@
 package rockpaperscissors;
 
-import org.junit.Assert;
+import static org.junit.Assert.*;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -10,7 +10,7 @@ import java.util.Set;
 /**
  * Created by codeamend on 9/30/15.
  */
-public class GameFeatures extends Assert {
+public class GameFeatures {
 
     Set<Gesture> gestures = new HashSet<>(Arrays.asList(Gesture.values()));
 

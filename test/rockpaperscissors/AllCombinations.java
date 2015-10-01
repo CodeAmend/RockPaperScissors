@@ -1,14 +1,12 @@
 package rockpaperscissors;
 
-import org.junit.Assert;
 import org.junit.Test;
-
-import java.awt.*;
+import static org.junit.Assert.*;
 import static rockpaperscissors.Gesture.*;
 /**
  * Created by codeamend on 9/28/15.
  */
-public class AllCombinations extends Assert {
+public class AllCombinations {
 
     //Wins
     @Test
