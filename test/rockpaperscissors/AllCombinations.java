@@ -81,6 +81,10 @@ public class AllCombinations extends Assert {
     public void spock_loses_to_lizard() {
         assertFalse(SPOCK.beats(LIZARD));
     }
+    @Test
+    public void spock_loses_to_paper() {
+        assertFalse(SPOCK.beats(PAPER));
+    }
 
     //Tie
     @Test
