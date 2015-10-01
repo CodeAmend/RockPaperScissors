@@ -5,9 +5,6 @@ import static rockpaperscissors.Gesture.*;
  */
 public class RockPaperScissors {
 
-    private Gesture usersHand;
-    private Gesture computersHand;
-
     public static void main(String[] args) {
         RockPaperScissors rps = new RockPaperScissors();
         for(int i = 0; i < 10; i++) {
@@ -16,8 +13,8 @@ public class RockPaperScissors {
     }
 
     public void oneTwoThreeShoot() {
-        usersHand = ROCK;
-        computersHand = Gesture.randomHand();
+        Gesture usersHand = ROCK;
+        Gesture computersHand = Gesture.randomHand();
         displayScore(usersHand, computersHand);
     }
 
