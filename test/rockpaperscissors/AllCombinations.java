@@ -107,8 +107,4 @@ public class AllCombinations extends Assert {
     public void lizard_ties_with_lizard() {
         assertTrue(LIZARD.equals(LIZARD));
     }
-
-
-
-
 }

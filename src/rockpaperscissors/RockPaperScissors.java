@@ -30,5 +30,4 @@ public class RockPaperScissors {
             System.out.printf("User: %s\n" + "Comp: %s\n" + "You Lose!!!\n\n", user, opponent);
         }
     }
-
 }
