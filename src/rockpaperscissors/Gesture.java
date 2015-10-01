@@ -9,7 +9,7 @@ import java.util.Random;
 
 public enum Gesture {
 
-    ROCK(1), PAPER(2), SCISSORS(3), SPOCK(4);
+    ROCK(1), PAPER(2), SCISSORS(3), SPOCK(4), LIZARD(5);
 
     private int rank;
     static Random rand = new Random();
