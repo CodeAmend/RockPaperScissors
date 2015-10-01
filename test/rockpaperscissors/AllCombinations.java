@@ -103,6 +103,10 @@ public class AllCombinations extends Assert {
     public void spock_ties_with_spock() {
         assertTrue(SCISSORS.equals(SCISSORS));
     }
+    @Test
+    public void lizard_ties_with_lizard() {
+        assertTrue(LIZARD.equals(LIZARD));
+    }
 
     @Test
     public void gesture_test() {
