@@ -66,6 +66,10 @@ public class AllCombinations extends Assert {
         assertFalse(PAPER.beats(SCISSORS));
     }
     @Test
+    public void paper_loses_to_lizard() {
+        assertFalse(PAPER.beats(LIZARD));
+    }
+    @Test
     public void scissors_loses_to_rock() {
         assertFalse(SCISSORS.beats(ROCK));
     }
