@@ -24,7 +24,6 @@ public enum Gesture {
     }
 
     public static Gesture getRandomGesture() {
-        int gesturePick = pick.nextInt(Gesture.values().length);
-        return Arrays.asList(Gesture.values()).get(gesturePick);
+        return values()[pick.nextInt(values().length)];
     }
 }
