@@ -16,6 +16,10 @@ public class AllCombinations extends Assert {
         assertTrue(PAPER.beats(ROCK));
     }
     @Test
+    public void paper_beats_spock() {
+        assertTrue(PAPER.beats(SPOCK));
+    }
+    @Test
     public void rock_beats_scissors() {
         assertTrue(ROCK.beats(SCISSORS));
     }
