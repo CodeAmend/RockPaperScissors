@@ -108,10 +108,7 @@ public class AllCombinations extends Assert {
         assertTrue(LIZARD.equals(LIZARD));
     }
 
-    @Test
-    public void gesture_test() {
 
-    }
 
 
 }

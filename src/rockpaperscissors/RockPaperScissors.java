@@ -10,7 +10,9 @@ public class RockPaperScissors {
 
     public static void main(String[] args) {
         RockPaperScissors rps = new RockPaperScissors();
-        rps.oneTwoThreeShoot();
+        for(int i = 0; i < 10; i++) {
+            rps.oneTwoThreeShoot();
+        }
     }
 
     public void oneTwoThreeShoot() {
