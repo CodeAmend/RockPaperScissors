@@ -12,4 +12,11 @@ public class ExtendingTheGame extends Assert {
     public void spock_beats_scissors() {
         assertTrue(SPOCK.beats(SCISSORS));
     }
+
+    @Test
+    public void lizard_beats_paper() {
+        assertTrue(LIZARD.beats(PAPER));
+    }
+
+
 }
